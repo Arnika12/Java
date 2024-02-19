@@ -1,0 +1,36 @@
+
+
+### Format Specifier, Variables, Data Types:
+1. **Basic:** Write a program that takes user input for different data types (int, float, char) and displays them using appropriate format specifiers.
+    - Basic Level Question: How would you modify the program to display the sizes of each data type (int, float, char) in bytes?
+    - Advanced Level Question: Implement a program that demonstrates the difference between `printf` and `scanf` format specifiers (%d, %i, %u, %x, %p) with examples.
+
+### Operators & Operator Precedence:
+2. **Basic:** Create a simple calculator that performs addition, subtraction, multiplication, and division based on user input using appropriate operators.
+    - Basic Level Question: How can you modify the calculator program to handle more operations (exponentiation, modulus)?
+    - Advanced Level Question: Design a program that evaluates a given mathematical expression (involving operators and parentheses) using operator precedence rules.
+
+### Constants, Escape Sequences, Comments:
+3. **Basic:** Display constants (e.g., mathematical constants like pi) using `const` and explain their significance with comments.
+    - Basic Level Question: How can you redefine constants using `#define` and compare it with using `const`?
+    - Advanced Level Question: Write a program that manipulates escape sequences to create a formatted output (e.g., a table or a pattern) using comments to explain the code's logic.
+
+### Control Statements (if, if...else, if...else if):
+4. **Basic:** Develop a program that determines if a number is positive, negative, or zero using if, else if, and else statements.
+    - Basic Level Question: How would you modify this program to check if the number is even or odd?
+    - Advanced Level Question: Create a program that determines the roots of a quadratic equation using if, else if, and else statements based on the discriminant.
+
+### Loops (for, do...while, while):
+5. **Basic:** Write a program that calculates the factorial of a number using different loops (for, while, do...while).
+    - Basic Level Question: How would you optimize the factorial program to handle larger numbers efficiently?
+    - Advanced Level Question: Implement a program that generates the Fibonacci sequence using loops and explains the iteration logic using comments.
+
+### Switch Statement:
+6. **Basic:** Create a menu-driven program using a switch statement that performs different operations (e.g., addition, subtraction, multiplication).
+    - Basic Level Question: How can you enhance the menu program to include more complex operations or functionalities?
+    - Advanced Level Question: Design a program using a switch statement to simulate a vending machine with various product selections and prices.
+
+### Break, Continue, Goto Statements:
+7. **Basic:** Implement a program demonstrating the use of break, continue, and goto statements within loops or conditional statements.
+    - Basic Level Question: How can you create a loop that skips even numbers using the continue statement?
+    - Advanced Level Question: Develop a program that manages a library catalog, allowing users to search for books by title or author using goto statements for error handling and flow control.
