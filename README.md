@@ -1,2 +1,2 @@
-# Addition
-Addition program in java
+# Multiplication
+Multiplication program in java
