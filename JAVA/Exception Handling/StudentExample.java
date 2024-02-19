@@ -1,4 +1,5 @@
-Q.2 Write a class Student with attributes roll no, name, age and course. Initialize values through parameterized constructor. If age of student is not in between 15 and 21 then generate user-defined exception ―Age Not Within The Range. If name contains numbers or special symbols raise exception ―Name not valid
+//  Write a class Student with attributes roll no, name, age and course. Initialize values through parameterized constructor. If age of student is not in between 15 and 21 then generate user-defined exception ―Age Not Within The Range. If name contains numbers or special symbols raise exception ―Name not valid
+
 import java.util.Scanner;
 
 // Custom exception for age not in the specified range
