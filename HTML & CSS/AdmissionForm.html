@@ -1,0 +1,99 @@
+<!--Design a admission form. which should contains : text box, multiline text box, a table
+which shows your academic record, radio button, check box, submit button etc. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admission Form</title>
+</head>
+
+<body>
+
+    <h1 style="text-align:center; color:blue;"> Admission Form </h1>
+    <form>
+    <table border="0" align="center">
+        <tr>
+            <td>NAME:</td>
+            <td><input type="text" placeholder="Enter your name here"></td>
+        </tr>
+        
+        <tr>
+            <td>PASSWORD:</td>
+            <td><input type="password" placeholder="Enter password"></td>
+        </tr>
+        
+        <tr>
+            <td>Date of Birth:</td>
+            <td><input type="date"></td>
+        </tr>
+        
+        <tr>
+            <td>Mobile No.:</td>
+            <td><input type="number" placeholder="Enter mobile no."></td>
+        </tr>
+        
+        <tr>
+            <td>EMail:</td>
+            <td><input type="email" placeholder="Enter mail id"></td>
+        </tr>
+        
+        <tr>
+            <td>ADDRESS:</td>
+            <td><textarea placeholder="Enter your address"></textarea></td>
+        </tr>
+        
+        <tr>
+            <td>Class:</td>
+        	<td>
+        		<input type="radio" value="FYMSc(CA)" name="class"> FYMSc(CA) <br>  
+        	   	<input type="radio" value="SYMSc(CA)" name="class"> SYMSc(CA) 
+        	</td>  
+        </tr>
+
+        </tr>
+        
+        <tr>
+            <td>Subject:</td>
+            <td><input type="checkbox" value="python" name="subject">Web Technology   </td>
+        </tr>
+        <tr>
+            <td> </td>
+	    <td>
+                <input type="checkbox" value="java" name="subject"> Core Java          <br>
+                <input type="checkbox" value="c" name="subject"> Advance Java	       <br>
+                <input type="checkbox" value="c#" name="subject"> Computer Network     <br>
+                <input type="checkbox" value="c++" name="subject"> DBMS	               <br>
+            </td>
+        </tr>
+        
+        <tr>
+                <td>Enter your percentage:</td>
+                <td><input type="text" placeholder="Web Technology"></td>  
+        </tr>
+        <tr>
+        	<td> </td>
+                <td>	
+                	
+                    	<input type="text" placeholder="Core Java">	    <br>
+                	<input type="text" placeholder="Advance Java">	    <br>
+               		<input type="text" placeholder="Computer Network"> <br>
+               		<input type="text" placeholder="DBMS">
+               </td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td>
+            	<input type="reset" value="Clear" name="reset"> &nbsp; 
+            	<input type="submit" value="Register" name="submit">
+            </td>
+        </tr>
+	
+    </table>
+    </form>
+</body>
+
+</html>
+

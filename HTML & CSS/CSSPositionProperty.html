@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Using Position property</title>
+    <style>
+        p.one{
+            border : 2px solid red;
+            position : static;
+        }
+        p.two{
+            border : 2px dashed blue;
+            position : relative;
+            left:20px;
+            margin-right: 20px ;
+
+        }
+        p.three{
+            border : 5px solid aqua;
+            top: 150px;
+            right: 40px;
+            width: 200px;
+            height: 100px;
+            position : absolute;
+        }
+        p.four{
+            border : 3px solid green ;
+            margin-right: 20px ;
+            text-align: center;
+            position : fixed;
+            top: 270px;
+            right: 0;
+            width: 300px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positioning in CSS : Static,Relative,Fixed and Absolute</h1>
+    <p class="one">This div element has position : static; </p>
+    <p class="two">This div element has position : relative;</p>
+    <p class="three">This div element has position : absolute; </p>
+    <p class="four">This div element has position :fixed; </p>
+
+</body>
+</html>
