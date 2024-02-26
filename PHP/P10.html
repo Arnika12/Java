@@ -1,0 +1,31 @@
+<!-- Write a PHP script to accept details of Employee (Name, Salary, Designation,
+Address) and display it on next page.-->
+
+<html>
+<head>
+   <title>Enter Employee Details</title>
+</head>
+<body>
+   <h2>Enter Employee Details:</h2>
+   <form action="employee.php" method="post">
+   <table align="center">
+      <tr>
+      	<td> Name : </td>
+      	<td> <input type="text" id="name" name="name" required><br><br></td>
+      </tr>
+      <tr>
+      	<td>Salary : </td>
+      	<td><input type="number" id="salary" name="salary" required><br><br></td>
+      </tr>
+      <tr>
+      	<td> Designation : </td>
+      	<td> <input type="text" id="designation" name="designation" required><br><br></td>
+      </tr>
+      <tr>
+      	<td></td>
+      	<td><input type="submit" value="Submit"></td>
+      </tr>
+   </table>
+   </form>
+</body>
+</html>
