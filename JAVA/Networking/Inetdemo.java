@@ -1,5 +1,5 @@
 						// InetAddress Demo
-// Write a Java program that demonstrates the use of InetAddress class to obtain the IP address and host name of a website. The program prompts the user to input a website address (e.g., www.google.com) and then displays the corresponding host name and IP address. 
+// 2. Write a program to find primary IP address of the host name which you passed as a parameter
 
 import java.io.*;
 import java.net.*;
