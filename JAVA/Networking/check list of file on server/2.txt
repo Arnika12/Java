@@ -1,0 +1,1 @@
+Java socket programming provides facility to share data between different computing devices.
