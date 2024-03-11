@@ -1,4 +1,6 @@
-//1. Write a client-server program which displays the server machine’s date and time on the client machine.
+/*1. Write a client-server program which displays the server machine’s date and time on the client machine.*/
+
+//Client side code 
 
 import java.io.*;
 import java.net.*;
