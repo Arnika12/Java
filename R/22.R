@@ -16,4 +16,4 @@ data[,c("Wind")]=NULL
 print(data)
 
 print("After removing Solar.R and Wind from dataframe ")
-data
+print(data)
