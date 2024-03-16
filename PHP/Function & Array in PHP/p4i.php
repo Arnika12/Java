@@ -1,5 +1,5 @@
 <?php
-	include 'function.php';
+	include 'functionP4.php';
 		
 		$a=$_POST['no1'];
 		$b=$_POST['no2'];
