@@ -1,0 +1,40 @@
+<html>
+  <head>
+	<title>Operation</title>
+  </head>
+  <body>
+	<form method="post" action="p4i.php">
+		Enter first number : <input type="text" name="no1" value=" "><br><br>
+		Enter Second number : <input type="text" name="no2" value=" "><br><br>
+		<input type='radio' name='op' value='1'>Addition<br>
+		<input type='radio' name='op' value='2'>Multiplication<br>
+		<input type='radio' name='op' value='3'>Subtraction<br>
+		<input type='radio' name='op' value='4'>Division<br><br>
+		<input type='submit' name='Submit' value='Submit'>
+	</form>
+
+<?php
+include 'function.php';
+if($_POST){
+		$a=$_POST['no1'];
+		$b=$_POST['no2'];
+		$c=$_POST['op'];
+		switch($c)
+		{
+			case 1:
+			    	$d=add($a,$b);
+			    	echo "Addition :$d";break;
+			case 2:
+				$d=mul($a,$b);
+			   	echo "Multiplication :$d";break;
+			case 3:
+				$d=sub($a,$b);
+			    	echo "Subtraction:$d";break;
+			case 4:
+				$d=div($a,$b);
+			    	echo "Division:$d";break;		
+		}
+	}
+?>
+</body>
+</html>
