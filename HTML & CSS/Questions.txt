@@ -1,0 +1,75 @@
+                Practical Assignment : Set I (HTML and CSS )
+
+1. Write HTML programs to display the message “Welcome to Web Technology”
+
+2. Write HTML programs to display word “HTML” in size of h1 to h6
+
+3. Write HTML script to display the text in bold, italic, underline and with strike. Apply separate effect on 
+    different text.
+
+4. Write HTML programs to display : H2O and A 2 + B 2 = C 2
+
+5. Write HTML script that will use image as a background.
+
+6. Create an html page with following specifications :
+    a. Title should be about “My City”
+    b. Place your City name at the top of the page in large text and in red color
+    c. Add names and images (as a link) of landmarks in your city each in a different color, style and typeface .
+    d. After clicking on images it should display history of that place.
+
+7. Write HTML code to display following output.
+     Tea
+      o Hot tea
+      o Black tea
+     Coffee
+         Cold coffee
+         Hot coffee
+8. Write HTML code to display the list of different courses available in our college using ordered as well as 
+    unordered list.
+9. Design a table which shows weekly time table of a specific class.
+
+10. Divide a screen in four equal part . Each frame shows : list of different activities conducted by your department.
+
+11. Design a admission form. which should contains : text box, multiline text box, a table which shows your academic 
+    record, radio button, check box, submit button etc.
+
+12. Write inline CSS program to display with background color pink with red colored text.
+
+13. Write internal CSS program to display with background color black with white colored text.
+
+14. Write external CSS program to display with background color sky blue with blue colored text.
+
+15. Write CSS using HTML which uses of text decoration, border, padding and margin.
+
+16. Write CSS using HTML which displays following output
+
+17. Write CSS using HTML which displays following output
+    List Property in CSS
+    Unordered lists
+      o Coffee
+      o Tea
+      o Milk
+       Apple
+       Mango
+       Banana
+       Watermelon
+    Ordered list
+      I. Rose
+      II. Jasmine
+      III. Marigold
+      a. Sunflower
+      b. Tulip
+      c. Lily
+      d. Tuberose
+
+18.Write CSS using HTML which displays following output
+
+19. Write CSS using HTML which displays following output : use image property
+
+20. Write CSS using HTML which displays following output
+
+21. Write CSS using HTML which displays following output : Use of Id and classes in CSS
+
+22. Write CSS using HTML which displays following output : Use of <div> and <span> in CSS
+The < span > element !
+I have a Red rose and dark Chocolate.
