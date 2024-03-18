@@ -1,6 +1,6 @@
 #21) Write a R program to count the number of NA values in a data frame column.
 
-data <- read.csv("airquality.csv")
+data <- read.csv("D:\\MSc FY\\Programming\\R\\airquality.csv")
 print(data)
 count <- sum(is.na(data$Ozone))
 count1 <- sum(is.na(data$Solar.R))
