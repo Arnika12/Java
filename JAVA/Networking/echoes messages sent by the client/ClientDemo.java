@@ -4,29 +4,35 @@
 import java.io.*;
 import java.net.*;
 
-class ClientDemo
-{
-            public static void main(String a[]) throws Exception
-            {
-                        Socket s = new Socket("localhost",5500);
-                        System.out.println("client is connected : ");
-                        DataInputStream ios=new DataInputStream(s.getInputStream());
-                        DataOutputStream dos=new DataOutputStream(s.getOutputStream());
+class ClientDemo {
+    public static void main(String[] args) {
+        try {
+            Socket s = new Socket("localhost", 5500);
+            System.out.println("Client connected to server.");
 
-                        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-                        String s1,s2;
-                        while(true)
-                        {
-                                    System.out.println("Server ....");
-                                    s1=br.readLine();
-                                    dos.writeUTF(s1);
-                                    s2=(String)ios.readUTF();
-                                    if(s2.equals("end") || s2.equals("END"))
-                                    {
-                                                System.out.println("chatting terminated");
-                                                break;
-                                    }
-                                    System.out.println("Client "+s2);
-                        }
+            DataInputStream ios = new DataInputStream(s.getInputStream());
+            DataOutputStream dos = new DataOutputStream(s.getOutputStream());
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+            String message;
+            while (true) {
+                System.out.println("Enter message to send to server:");
+                message = br.readLine();
+                dos.writeUTF(message);
+                if (message.equalsIgnoreCase("end")) {
+                    System.out.println("Chatting terminated.");
+                    break;
+                }
+                String response = ios.readUTF();
+                System.out.println("Server response: " + response);
             }
+            // Close resources
+            dos.close();
+            ios.close();
+            s.close();
+        } catch (IOException e) {
+            // Handle IO exceptions
+            System.err.println("Error: " + e.getMessage());
+        }
+    }
 }
