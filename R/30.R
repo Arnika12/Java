@@ -14,5 +14,8 @@ print(Emp[order(Emp$Name,decreasing = FALSE),])
 # print("sort the data in decreasing order based on Names ")
 # print(Emp[order(Emp$Name, decreasing = TRUE), ]   )
 
-
+# print(Emp[order(Emp$Name, decreasing = FALSE),]) 
+#  Sorts data frame Emp based on Name column in ascending order.
+#  It uses the order() function to determine order of rows, & then subsets data frame accordingly. 
+# The decreasing = FALSE argument specifies that the sorting should be done in ascending order.
 

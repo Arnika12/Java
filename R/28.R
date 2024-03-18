@@ -4,6 +4,13 @@ decimal_num <- 10
 binary_num <- as.integer(intToBits(decimal_num))
 cat("Decimal to Binary:", paste(rev(binary_num), collapse = ""), "\n")
 
-# binary_num <- as.integer(intToBits(decimal_num)): Converts the decimal number into its binary representation and stores it as an integer in the variable binary_num.
-# cat(“Decimal to Binary:”, paste(rev(binary_num), collapse = “”), “\n”): Prints the message “Decimal to Binary:” followed by the binary representation of 33 by reversing the binary digits and removing spaces, separated by a newline.
 
+# as.integer(intToBits(decimal_num)):Converts the decimal number into its binary representation 
+#                                     and stores it as an integer in the variable binary_num.
+
+# paste(rev(binary_num), collapse = ""): This combines the elements of the reversed integer 
+#       vector binary_num into a single string, where each element is concatenated without 
+#     any separator(collapse = ""). This creates a binary string representing the binary number.
+
+#      paste(rev(binary_num), collapse = "") converts the binary number represented as an 
+#       integer vector into a binary string.
