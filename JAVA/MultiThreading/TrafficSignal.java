@@ -15,34 +15,40 @@ class TrafficSignal extends Frame
 		setBackground(Color.BLACK);
 	}
 
+	
+
 	public void paint(Graphics g)
 	{
 		super.paint(g);
 		int w = 100;
 		int h = 100;
 
+		// Center coordinates of the window
+    	int centerX = getWidth() / 2;
+    	int centerY = getHeight() / 2;
+
 		switch(f)
 		{
 			case 0:
 				g.setColor(Color.RED);
-				g.fillOval(70,200,w,h);
+				g.fillOval(centerX - w / 2,200,w,h);
 				g.setColor(Color.WHITE);
-				g.fillOval(70,h+200,w,h);
-				g.fillOval(70,2*h+200,w,h);
+				g.fillOval(centerX - w / 2,h+200,w,h);
+				g.fillOval(centerX - w / 2,2*h+200,w,h);
 				break;
 			case 1:
 				g.setColor(Color.YELLOW);
-				g.fillOval(70,h+200,w,h);
+				g.fillOval(centerX - w / 2,h+200,w,h);
 				g.setColor(Color.WHITE);
-				g.fillOval(70,200,w,h);
-				g.fillOval(70,2*h+200,w,h);
+				g.fillOval(centerX - w / 2,200,w,h);
+				g.fillOval(centerX - w / 2,2*h+200,w,h);
 				break;
 			case 2:
 				g.setColor(Color.GREEN);
-				g.fillOval(70,2*h+200,w,h);
+				g.fillOval(centerX - w / 2,2*h+200,w,h);
 				g.setColor(Color.WHITE);
-				g.fillOval(70,200,w,h);
-				g.fillOval(70,h+200,w,h);
+				g.fillOval(centerX - w / 2,200,w,h);
+				g.fillOval(centerX - w / 2,h+200,w,h);
 				break;
 		}
 		
