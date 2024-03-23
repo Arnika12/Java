@@ -1,0 +1,19 @@
+                    Practical Assignment : Set V (Web Techniques)
+
+1. Write a PHP script to display following information using super global variable.
+    a) Client IP Address.
+    b) Browser detection/information.
+    C) To check whether the page is called from ‘https’ or ‘http’.
+
+2. Write a PHP script to keep track of number of times the web page has been access. [Use Session]
+
+3. Write a PHP script to accept username and password. If in the first three chances,
+    username and password entered is correct then display second form with ‘welcome message’ otherwise display error message. [ Use Session]
+
+4. Write a PHP script to accept Employee details ( eno, ename, address) on first page.  On second page accept earning ( Basic, Da, HRA). 
+      On third page print Employee information( eno,ename, Address, BASIC, DA, HRA, TOTAL) [Hint: Use Session]
+
+5. Write a PHP script to check how many times the web page access.[ Use cookies]
+
+6. Write a PHP script to change the preference of your web page like font style, font,
+    size, font color, background color using cookie. Display selected settings on next page and actual implementation (with new settings) on third page.
