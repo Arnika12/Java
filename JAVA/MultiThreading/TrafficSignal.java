@@ -1,3 +1,5 @@
+//6. Write a program to simulate traffic signal using threads
+
 import java.awt.*;
 import java.awt.event.*;
 class TrafficSignal extends Frame
