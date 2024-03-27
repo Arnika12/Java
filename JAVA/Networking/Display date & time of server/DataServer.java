@@ -10,10 +10,12 @@ public class DataServer{
 public static void main(String args[]) throws Exception {
 	ServerSocket s = new ServerSocket(5555);
 	while(true){
-		System.out.println("Waitingfor connection");
+		System.out.println("Waiting for connection");
 		Socket soc = s.accept();
 		DataOutputStream out = new DataOutputStream(soc.getOutputStream());
 		out.writeBytes ("Server date :" + (new Date()).toString() + "\n");
+		current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S");
+		out.writeBytes ("Server time :" + current_time + "\n");
 		out.close();
 		soc.close();
 	}
