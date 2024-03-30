@@ -1,4 +1,4 @@
-# 5. Write a PHP script to check how many times the web page access.[ Use cookies]
+<!-- 5. Write a PHP script to check how many times the web page access.[ Use cookies] -->
 
 <html>
 <head>
