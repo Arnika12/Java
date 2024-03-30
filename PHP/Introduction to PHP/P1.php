@@ -58,15 +58,15 @@ in tabular format. Use only 4 textboxes. [ Use explode]-->
 <div class="container">
 <?php
 if($_POST){
-                $itemcode = $_POST['icode'];
-                $itemname = $_POST['iname'];
-                $unit = $_POST['iunit'];
-                $rate = $_POST['irate'];
+    $itemcode = $_POST['icode'];
+    $itemname = $_POST['iname'];
+    $unit = $_POST['iunit'];
+    $rate = $_POST['irate'];
              
-                $icode = explode(',',$itemcode);
-                $iname = explode(',',$itemname);
-                $iunit = explode(',',$unit);
-                $irate = explode(',',$rate);
+    $icode = explode(',',$itemcode);
+    $iname = explode(',',$itemname);
+    $iunit = explode(',',$unit);
+    $irate = explode(',',$rate);
                              
 $z=count($icode);   #counting total number of items added by user
 
