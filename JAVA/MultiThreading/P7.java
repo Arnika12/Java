@@ -15,7 +15,7 @@ class CountdownThread extends Thread {
     }
 }
 
-public class Main {
+public class P7 {
     public static void main(String[] args) {
         Thread countdownThread = new CountdownThread();
         countdownThread.start();

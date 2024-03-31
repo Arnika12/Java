@@ -27,7 +27,7 @@ class SumThread extends Thread {
     }
 }
 
-public class Main {
+public class P4 {
     public static void main(String[] args) throws InterruptedException {
         int[] array = new int[1000];
         for (int i = 0; i < 1000; i++) {

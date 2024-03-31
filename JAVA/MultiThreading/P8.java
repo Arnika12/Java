@@ -73,7 +73,7 @@ class ConsumerThread extends Thread {
     }
 }
 
-public class Main {
+public class P8 {
     public static void main(String[] args) {
         Buffer buffer = new Buffer();
         Thread producerThread = new ProducerThread(buffer);

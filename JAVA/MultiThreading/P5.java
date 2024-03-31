@@ -21,7 +21,7 @@ class PrintText_Thread extends Thread {
     }
 }
 
-public class Main {
+public class P5 {
     public static void main(String[] args) {
         Thread thread1 = new PrintText_Thread("I am in FY", 10);
         Thread thread2 = new PrintText_Thread("I am in SY", 20);
