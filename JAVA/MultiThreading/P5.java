@@ -23,20 +23,32 @@ class PrintText_Thread extends Thread {
 
 public class P5 {
     public static void main(String[] args) {
-        Thread thread1 = new PrintText_Thread("I am in FY", 10);
-        Thread thread2 = new PrintText_Thread("I am in SY", 20);
-        Thread thread3 = new PrintText_Thread("I am in TY", 30);
+        PrintText_Thread t1 = new PrintText_Thread("I am in FY", 10);
+        PrintText_Thread t2 = new PrintText_Thread("I am in SY", 20);
+        PrintText_Thread t3 = new PrintText_Thread("I am in TY", 30);
 
-        thread1.start();
-        thread2.start();
-        thread3.start();
-
+        t1.start();
         try {
-            thread1.join();
-            thread2.join();
-            thread3.join();
+            t1.join(); // Wait for t1 to finish
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+            System.out.println("Main thread interrupted");
+        }
+
+        t2.start();
+        try {
+            t2.join(); // Wait for t2 to finish
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.out.println("Main thread interrupted");
+        }
+
+        t3.start();
+        try {
+            t3.join(); // Wait for t3 to finish
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.out.println("Main thread interrupted");
         }
     }
 }

@@ -34,17 +34,17 @@ public class P4 {
             array[i] = ThreadLocalRandom.current().nextInt(100);
         }
 
-        SumThread[] sumThreads = new SumThread[10];
+        SumThread[] sumt1 = new SumThread[10];
         int startIndex = 0, endIndex = 100;
         for (int i = 0; i < 10; i++) {
-            sumThreads[i] = new SumThread(array, startIndex, endIndex);
-            sumThreads[i].start();
+            sumt1[i] = new SumThread(array, startIndex, endIndex);
+            sumt1[i].start();
             startIndex = endIndex;
             endIndex += 100;
         }
 
         int totalSum = 0;
-        for (SumThread thread : sumThreads) {
+        for (SumThread thread : sumt1) {
             thread.join();
             totalSum += thread.getSum();
         }
