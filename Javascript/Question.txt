@@ -1,0 +1,29 @@
+   --------------- Practical Assignment : Set VI (JavaScript)  ---------------
+
+1. Write the JavaScript to convert temperature from Celsius to Fahrenheit.
+
+2. Write the JavaScript to calculate sum of 5 subjects and find percentage
+
+3. Write the JavaScript to calculate simple interest.
+
+4. Write the JavaScript to do swapping of two values. ( For example : if A=100 and B=200 , after swapping it becomes A=200 and B=100)
+
+5. Write the JavaScript to take input as student’s age and check whether given student can be eligible for driving a bike or not
+
+6. Write the JavaScript to check whether a given year is leap year or not.
+
+7.Write the JavaScript to WAP to print grade of a student using If Else Ladder Statement
+
+8. Write the JavaScript to take marks of five subjects. Display total marks and percentage. With the help of percentage print grade of a student using switch case
+
+9. Write the JavaScript to accept the week day as number from user and display Monday to Sunday.
+
+10. Write the JavaScript to print table of first n numbers in proper format.
+
+11. Write the JavaScript to check whether a given number is perfect number or not.
+
+12. Write the JavaScript to WAP to check whether a given number is prime number
+
+13. Write the JavaScript to print first n perfect numbers and prime numbers
+
+14. Write the JavaScript to check whether a given number is armstrong number or not.
