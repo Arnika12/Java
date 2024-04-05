@@ -1,0 +1,33 @@
+<!-- 4. Write the JavaScript to do swapping of two values. ( For example : if A=100 and B=200 , 
+after swapping it becomes A=200 and B=100) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swap Values</title>
+</head>
+<body>
+    <h2>Swap Values</h2>
+    <label>Enter value for A:</label>
+    <input type="number" id="valueA">
+    <br>
+    <label>Enter value for B:</label>
+    <input type="number" id="valueB">
+    <br>
+    <button onclick="swap()">Swap</button>
+    <p id="result"></p>
+
+    <script>
+        function swap() {
+            var a = parseFloat(document.getElementById("valueA").value);
+            var b = parseFloat(document.getElementById("valueB").value);
+
+            var temp = a;
+            a = b;
+            b = temp;
+
+            document.getElementById("result").innerHTML = "A = " + a + ", B = " + b;
+        }
+    </script>
+</body>
+</html>

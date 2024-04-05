@@ -1,0 +1,25 @@
+<!-- 5. Write the JavaScript to take input as student’s age and check whether given student can be 
+eligible for driving a bike or not -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Driving Eligibility</title>
+</head>
+<body>
+    <h2>Check Driving Eligibility</h2>
+    <label>Enter your age:</label>
+    <input type="number" id="age">
+    <br>
+    <button onclick="checkEligibility()">Check Eligibility</button>
+    <p id="result"></p>
+
+    <script>
+        function checkEligibility() {
+            var age = parseFloat(document.getElementById("age").value);
+            var message = age >= 18 ? "Eligible for driving" : "Not eligible for driving";
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+</body>
+</html>

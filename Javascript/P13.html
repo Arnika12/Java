@@ -1,0 +1,50 @@
+<!-- 13. Write the JavaScript to print first n perfect numbers and prime numbers -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfect and Prime Number Printer</title>
+</head>
+<body>
+    <h2>Perfect and Prime Number Printer</h2>
+    <label>Enter a number (n):</label>
+    <input type="number" id="numberInput" min="1">
+    <button onclick="printNumbers()">Print Numbers</button>
+    <p id="result"></p>
+
+    <script>
+        function printNumbers() {
+            var n = parseInt(document.getElementById("numberInput").value);
+            var perfectNumbers = [];
+            var primeNumbers = [];
+            var number = 1;
+            while (perfectNumbers.length < n || primeNumbers.length < n) {
+                var sum = 0;
+                for (var i = 1; i <= number / 2; i++) {
+                    if (number % i === 0) {
+                        sum += i;
+                    }
+                }
+                if (sum === number && number !== 0) {
+                    perfectNumbers.push(number);
+                }
+                var isPrime = true;
+                if (number === 1) {
+                    isPrime = false;
+                }
+                for (var j = 2; j <= Math.sqrt(number); j++) {
+                    if (number % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    primeNumbers.push(number);
+                }
+                number++;
+            }
+            document.getElementById("result").innerHTML = "<b>Perfect Numbers:</b> " + perfectNumbers.join(", ") + "<br><b>Prime Numbers:</b> " + primeNumbers.join(", ");
+        }
+    </script>
+</body>
+</html>

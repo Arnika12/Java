@@ -1,0 +1,64 @@
+<!-- 8. Write the JavaScript to take marks of five subjects. Display total marks and percentage. 
+With the help of percentage print grade of a student using switch case -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculation</title>
+</head>
+<body>
+    <h2>Grade Calculation</h2>
+    <label>Enter marks for Subject 1:</label>
+    <input type="number" id="subject1">
+    <br>
+    <label>Enter marks for Subject 2:</label>
+    <input type="number" id="subject2">
+    <br>
+    <label>Enter marks for Subject 3:</label>
+    <input type="number" id="subject3">
+    <br>
+    <label>Enter marks for Subject 4:</label>
+    <input type="number" id="subject4">
+    <br>
+    <label>Enter marks for Subject 5:</label>
+    <input type="number" id="subject5">
+    <br>
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var subject1 = parseFloat(document.getElementById("subject1").value);
+            var subject2 = parseFloat(document.getElementById("subject2").value);
+            var subject3 = parseFloat(document.getElementById("subject3").value);
+            var subject4 = parseFloat(document.getElementById("subject4").value);
+            var subject5 = parseFloat(document.getElementById("subject5").value);
+
+            var totalMarks = subject1 + subject2 + subject3 + subject4 + subject5;
+            var percentage = (totalMarks / 500) * 100;
+
+            var grade;
+
+            switch (true) {
+                case percentage >= 90:
+                    grade = 'A';
+                    break;
+                case percentage >= 80:
+                    grade = 'B';
+                    break;
+                case percentage >= 70:
+                    grade = 'C';
+                    break;
+                case percentage >= 60:
+                    grade = 'D';
+                    break;
+                default:
+                    grade = 'F';
+                    break;
+            }
+
+            document.getElementById("result").innerHTML = "Total Marks: " + totalMarks + "<br>Percentage: " + percentage.toFixed(2) + "%<br>Grade: " + grade;
+        }
+    </script>
+</body>
+</html>

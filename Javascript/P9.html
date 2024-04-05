@@ -1,0 +1,24 @@
+<!-- 9. Write the JavaScript to accept the week day as number from user and display Monday to Sunday. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Week Day Converter</title>
+</head>
+<body>
+    <h2>Week Day Converter</h2>
+    <label>Enter a number (1-7) representing the week day:</label>
+    <input type="number" id="weekdayInput" min="1" max="7">
+    <button onclick="convertWeekday()">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        function convertWeekday() {
+            var weekday = parseInt(document.getElementById("weekdayInput").value);
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var dayName = days[weekday - 1];
+            document.getElementById("result").innerHTML = "Week Day: " + dayName;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- 10. Write the JavaScript to print table of first n numbers in proper format. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Table Generator</title>
+</head>
+<body>
+    <h2>Number Table Generator</h2>
+    <label>Enter a number (n):</label>
+    <input type="number" id="numberInput" min="1">
+    <button onclick="generateTable()">Generate Table</button>
+    <p id="result"></p>
+
+    <script>
+        function generateTable() {
+            var n = parseInt(document.getElementById("numberInput").value);
+            var table = "<table border='1'><tr><th>Number</th><th>Table</th></tr>";
+            for (var i = 1; i <= n; i++) {
+                table += "<tr><td>" + i + "</td><td>";
+                for (var j = 1; j <= 10; j++) {
+                    table += i * j + " ";
+                }
+                table += "</td></tr>";
+            }
+            table += "</table>";
+            document.getElementById("result").innerHTML = table;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- 12. Write the JavaScript to WAP to check whether a given number is prime number -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Checker</title>
+</head>
+<body>
+    <h2>Prime Number Checker</h2>
+    <label>Enter a number:</label>
+    <input type="number" id="numberInput">
+    <button onclick="checkPrimeNumber()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkPrimeNumber() {
+            var number = parseInt(document.getElementById("numberInput").value);
+            var isPrime = true;
+            if (number === 1) {
+                isPrime = false;
+            }
+            for (var i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            var message = isPrime ? "Prime number" : "Not a prime number";
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+</body>
+</html>

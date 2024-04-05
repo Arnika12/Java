@@ -1,0 +1,33 @@
+<!-- 14. Write the JavaScript to check whether a given number is armstrong number or not. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Number Checker</title>
+</head>
+<body>
+    <h2>Armstrong Number Checker</h2>
+    <label>Enter a number:</label>
+    <input type="number" id="numberInput">
+    <button onclick="checkArmstrongNumber()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkArmstrongNumber() {
+            var number = parseInt(document.getElementById("numberInput").value);
+            var sum = 0;
+            var temp = number;
+            var numDigits = temp.toString().length;
+
+            while (temp > 0) {
+                var digit = temp % 10;
+                sum += Math.pow(digit, numDigits);
+                temp = Math.floor(temp / 10);
+            }
+
+            var message = sum === number ? "Armstrong number" : "Not an Armstrong number";
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+</body>
+</html>
