@@ -1,0 +1,5 @@
+
+Write a AJAX program to read contact. Dat file and print the contain of a file in a Tabular form when the user clicks on print button.
+Contact.dat file contain srno, name, residence number, mobile number, context/ relation.
+[ Enter at least 3 record in contact.dat file]
+[Note: Examinar may change the contact. dat, dept.dat and provide proper structure of the file]

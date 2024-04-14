@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function display(a_name) {
+            // alert("hi");
+            var ob = false;
+            ob = new XMLHttpRequest();
+            ob.onreadystatechange = function () {
+                if (ob.readyState == 4 && ob.status == 200)
+                    document.getElementById("place").innerHTML = ob.responseText;
+            }
+            ob.open("GET", "P6.php?a_name=" + a_name, true);
+            ob.send();
+        }
+    </script>
+</head>
+
+<body>
+    Select Actor Name :
+    <select name="a_name" onchange="display(this.value)">
+        <option value="">select actor</option>
+        <option value="Swapnil Joshi">Swapnil Joshi</option>
+        <option value="Sachit">Sachit</option>
+    </select>
+    <div id="place"></div>
+</body>
+
+</html>
+
+

@@ -1,0 +1,7 @@
+
+
+Write AJAX program to print movie by selecting an actor’s name. create table
+Movie and Actor with 1:M cardinality as follows:
+Movie ( mno, mname, release_year)
+Actor( ano, aname)
+[USE MySQL]

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Using Position property</title>
@@ -40,6 +40,49 @@
     <p class="two">This div element has position : relative;</p>
     <p class="three">This div element has position : absolute; </p>
     <p class="four">This div element has position :fixed; </p>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .one{
+        position:static;
+        border: 2px solid black;
+    }
+    .onei{
+        position:relative;
+        border: 2px dotted black;
+        margin-left: 50px;
+
+    }
+    .oneii{
+        position:absolute;
+        border: 5px solid black;
+        padding-bottom: 80px;
+        right:20px;
+        width:400px;
+
+    }
+    .oneiii{
+        position:fixed;
+        border: 3px solid black;
+        right: 0;
+        margin-top: 20%;
+        padding-right: 80px;
+    }
+</style>
+</head>
+<body>
+    <h1 class="one">this div element has position:static;</h1>
+    <h1 class="onei">this div element has position:relative;</h1>
+    <h1 class="oneii">this div element has position: absolute;</h1>
+    <h1 class="oneiii">this div element has position:fixed;</h1>
 
 </body>
 </html>

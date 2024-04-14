@@ -1,13 +1,14 @@
-body{
-    font-size:30px;
+body {
+  font-size: 30px;
 }
 
-h3{
-  font-family: "Times New Roman", Times, serif; 
-  color:rgb(255, 0, 102);
-  text-decoration : underline;
-  text-decoration-color:green;
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(255, 0, 102);
+  text-decoration: underline;
+  text-decoration-color: green;
 }
+
 ul.a {
   list-style-type: circle;
 }

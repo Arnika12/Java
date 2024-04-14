@@ -1,0 +1,6 @@
+
+Write a PHP Script to read ‘BOOK.xml’ file and print specific content of a file
+using DOMDocument parser. ‘Book.xml’ file should contain following
+information with at least 5 records with values.
+BookInfo
+Book NO, Book Name, Author Name, Price, Year.

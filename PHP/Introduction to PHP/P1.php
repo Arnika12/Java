@@ -8,15 +8,15 @@ in tabular format. Use only 4 textboxes. [ Use explode]-->
 	<style>
 		table 
 		{
-            		border-collapse: collapse;
-            		margin: 100px;
-           		border: 2px solid blue;
-           		padding:50px;
-        	}
-        	.container 
-			{
-				text-align: center;
-			}
+            border-collapse: collapse;
+    		margin: 100px;
+       		border: 2px solid blue;
+       		padding:50px;
+        }
+        .container 
+		{
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
