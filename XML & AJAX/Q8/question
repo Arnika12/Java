@@ -1,6 +1,6 @@
 
 
-Write a AJAX program to print Teacher information from MySQL table
-Teacher.
+Write a AJAX program to print Teacher information from MySQL table Teacher.
+
 Teacher (Tno, Name, Subject, Research area).
 [Note: Examiner can change MySQL table]

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Empdetails>
+                <Emp Empno="1" Empname="Mansi">
+                                <Sal>15000</Sal>
+                                <Desg>Developer</Desg>
+                </Emp>
+                <Emp Empno="2" Empname="Gautam">
+                                <Sal>35000</Sal>
+                                <Desg>HR</Desg>
+                </Emp>
+                <Emp Empno="3" Empname="Jack">
+                                <Sal>25000</Sal>
+                                <Desg>Tester</Desg>
+                </Emp>
+</Empdetails>

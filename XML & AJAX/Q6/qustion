@@ -5,3 +5,21 @@ Movie and Actor with 1:M cardinality as follows:
 Movie ( mno, mname, release_year)
 Actor( ano, aname)
 [USE MySQL]
+
+CREATE TABLE Movie (
+    mno SERIAL PRIMARY KEY,
+    mname VARCHAR(100),
+    release_year INTEGER
+);
+
+CREATE TABLE Actor (
+    ano SERIAL PRIMARY KEY,
+    aname VARCHAR(100)
+);
+
+INSERT INTO Movie (mname, release_year) VALUES ('Movie1', 2000);
+INSERT INTO Movie (mname, release_year) VALUES ('Movie2', 2005);
+INSERT INTO Movie (mname, release_year) VALUES ('Movie3', 2010);
+
+INSERT INTO Actor (aname) VALUES ('Actor1');
+INSERT INTO Actor (aname) VALUES ('Actor2');

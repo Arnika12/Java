@@ -1,20 +1,19 @@
-
 Write a script to create XML file ‘University.xml’. The element details of ‘University.xml’
 Are as follows:
 <Univ>
-<Uname>------------</Uname>
-<CITY>-----------------</CITY>
-<Rank>----------------<</Rank>
+    <Uname>------------</Uname>
+    <CITY>-----------------</CITY>
+    <Rank>----------------<< /Rank>
 </Univ>
 a) Store the details of at least 3 universities.
 b) Link the ‘University.xml’ file to CSS and get well formatted output as given below.
 i) Uname :
-                Color : black;
-                Font-family: copperplate G0thic Light;
-                Font size: 16pt;
-                Font:Bold;
+        Color : black;
+        Font-family: copperplate G0thic Light;
+        Font size: 16pt;
+        Font:Bold;
 ii) City and Rank
-                Color: Yellow;
-Font-family: Arial;
-                Font-size : 12pt;
-                Font: Bold;
+        Color: Yellow;
+        Font-family: Arial;
+        Font-size : 12pt;
+        Font: Bold;

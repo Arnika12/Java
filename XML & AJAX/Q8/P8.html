@@ -1,21 +1,23 @@
+<!DOCTYPE html>
 <html>
-<script type="text/javascript">
-    function display() {
-        ob = new XMLHttpRequest();
-        ob.open("GET", "P8.php");
-        ob.send();
-        ob.onreadystatechange = function () {
-            if (ob.readyState == 4 && ob.status == 200)
-                document.getElementById("i").innerHTML = ob.responseText;
+<head>
+    <title>DISPLAY INFORMATION OF TEACHER</title>
+    <script type="text/javascript">
+        function display() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("i").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "fetch_teacher.php", true);
+            xhttp.send();
         }
-
-    }
-</script>
-
+    </script>
+</head>
 <body>
     <h2>DISPLAY INFORMATION OF TEACHER</h2>
-    <input type=submit value="DISPLAY INFORMATION" onclick=display()>
-    <span id=i></span>
+    <input type="button" value="DISPLAY INFORMATION" onclick="display()">
+    <div id="i"></div>
 </body>
-
 </html>
