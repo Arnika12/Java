@@ -1,0 +1,7 @@
+Consider the following entities and their relationship. Student ( stud_id, name, class) Competition(c_no,c_name, type) 
+
+a) Relationship between student and competition In many-many with attributes rank and year. 
+
+b) Create a RDB in 3NF for above and solve the following. 
+
+c) Using above database write a script in PHP to accept a competition from user and display information of student who has secured 1st rank in that competition.
