@@ -13,4 +13,4 @@ setcookie("set2",$_GET['c'],time()+3600);
 setcookie("set3",$_GET['b'],time()+3600);
 setcookie("set4",$_GET['s'],time()+3600);
 ?><br>
-<a href="Assign5Prog6_1.php">Show</a>
+<a href="P6i.php">Show</a>
