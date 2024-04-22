@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -29,25 +28,12 @@ public class GUIServer {
             server = new ServerSocket(7777);
             appendToChatArea("Server is ready to accept the connection");
             appendToChatArea("Waiting...");
-             
-//            socket = server.accept();
-
-            br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            out = new PrintWriter(socket.getOutputStream());
-
-            startReading();
-            startWriting();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
 
-    /**
-     * @wbp.parser.entryPoint
-     */
-    
     private void initializeUI() {
         frame = new JFrame();
         frame.setTitle("Server");
@@ -67,53 +53,48 @@ public class GUIServer {
         messageField = new JTextField();
         messageField.setEnabled(false);
         inputPanel.add(messageField);
-        
-                sendButton = new JButton("Send");
-                sendButton.setEnabled(false);
-                sendButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        sendMessage();
-                    }
-                });
-                inputPanel.add(sendButton);
-                
-        
+
+        sendButton = new JButton("Send");
+        sendButton.setEnabled(false);
+        sendButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sendMessage();
+            }
+        });
+        inputPanel.add(sendButton);
+
         JLabel usernameLabel = new JLabel("Username:");
         inputPanel.add(usernameLabel);
-        
-                JTextField usernameField = new JTextField();
-                inputPanel.add(usernameField);
-        
-                JButton connectButton = new JButton("Connect");
-                connectButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        String usernameInput = usernameField.getText();
-                        if (!usernameInput.isEmpty()) {
-                            username = usernameInput;
-                            connectButton.setEnabled(false);
-                            usernameField.setEditable(false);
-                            
-                        }
-                        // Establish connection with the client
-                        try {
-                            socket = server.accept();
-                            br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                            out = new PrintWriter(socket.getOutputStream());
-                            appendToChatArea("[Server]: Client connected");
-                            startReading();
-                            messageField.setEnabled(true);
-                            sendButton.setEnabled(true);
-                            messageField.requestFocus();
-                        } catch (IOException ex) {
-                            ex.printStackTrace();
-                        }
 
-                        
-                    }
-                });
-                inputPanel.add(connectButton);
+        JTextField usernameField = new JTextField();
+        inputPanel.add(usernameField);
+
+        JButton connectButton = new JButton("Connect");
+        connectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String usernameInput = usernameField.getText();
+                if (!usernameInput.isEmpty()) {
+                    username = usernameInput;
+                    connectButton.setEnabled(false);
+                    usernameField.setEditable(false);
+                }
+                try {
+                    socket = server.accept();
+                    appendToChatArea("[Server]: Client connected");
+                    br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    out = new PrintWriter(socket.getOutputStream());
+                    startReading();
+                    messageField.setEnabled(true);
+                    sendButton.setEnabled(true);
+                    messageField.requestFocus();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        inputPanel.add(connectButton);
 
         JButton quitButton = new JButton("Quit");
         quitButton.addActionListener(new ActionListener() {
@@ -124,10 +105,9 @@ public class GUIServer {
         });
         inputPanel.add(quitButton);
 
-        
         frame.setVisible(true);
     }
-    
+
     private void shutdown() {
         try {
             server.close();
@@ -140,7 +120,6 @@ public class GUIServer {
         System.exit(0);
     }
 
-
     private void appendToChatArea(String message) {
         chatArea.append(message + "\n");
     }
@@ -151,12 +130,16 @@ public class GUIServer {
             try {
                 while (true) {
                     String message = br.readLine();
-                   
-                        appendToChatArea(message);
-                    
+                    if (message == null) {
+                        appendToChatArea("Client has disconnected.");
+                        shutdown();
+                        break;
+                    }
+                    appendToChatArea(message);
                 }
-            } catch (Exception e) {
+            } catch (IOException e) {
                 e.printStackTrace();
+                shutdown();
             }
         };
 
@@ -172,7 +155,6 @@ public class GUIServer {
                     String content = br1.readLine();
                     out.println(content);
                     out.flush();
-
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -195,9 +177,6 @@ public class GUIServer {
         }
     }
 
-    /**
-     * @wbp.parser.entryPoint
-     */
     public static void main(String[] args) {
         System.out.println("Going to start the server");
         Thread serverThread = new Thread(() -> new GUIServer());
@@ -208,5 +187,4 @@ public class GUIServer {
         serverThread.start();
         clientThread.start();
     }
-
 }

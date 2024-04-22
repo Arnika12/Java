@@ -1,8 +1,7 @@
 <!-- 2. Create a JSP page which will accept the file extension and display all files in the 
     current directory having that extension. Each filename should appear as a hyperlink on screen. -->
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
