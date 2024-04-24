@@ -9,19 +9,27 @@ public class Q2 {
     public static void main(String args[]) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-	  Connection conn=null ; 
+	  	Connection con=null ; 
+		Statement stmt= null;
+		ResultSet rs=null;
+		ResultSetMetaData remd=null;
+	
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java","root", "");
 
-       Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java","root", "");
-
-            PreparedStatement ps = con.prepareStatement("select * from person");
+            /*PreparedStatement ps = con.prepareStatement("select * from person");
         
             ResultSet rs= ps.executeQuery();
             ResultSetMetaData rsmd=rs.getMetaData();
                 System.out.println("Total Column:"+rsmd.getColumnCount());
                 System.out.println("Column name:"+rsmd.getColumnName(1));
-                System.out.println( "Column Type"+rsmd.getColumnTypeName(1));
+                System.out.println( "Column Type"+rsmd.getColumnTypeName(1));*/
              
-                
+	        stmt=con.createStatement();
+		rs=stmt.executeQuery("select * from Person;");
+		remd=rs.getMetaData();
+		System.out.println("total columns : "+ remd.getColumnCount());
+		System.out.println("1st column name : "+ remd.getColumnName(1));
+		System.out.println("1st column data type : "+ remd.getColumnTypeName(1));
   
 
             con.close();
