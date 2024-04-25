@@ -4,4 +4,69 @@ a) Relationship between student and competition In many-many with attributes ran
 
 b) Create a RDB in 3NF for above and solve the following. 
 
-c) Using above database write a script in PHP to accept a competition from user and display information of student who has secured 1st rank in that competition.
+c) Using above database write a script in PHP to accept a competition from user and display information of student who has secured 1st rank in 
+    that competition.
+
+
+---------- DB TABLES ---------------
+
+create table Student(stud_id int primary key, name varchar(10), class varchar(10));
+create table Competition(c_no int primary key, c_name varchar(10), type varchar(10));
+create table Stud_comp(stud_id int , c_no int, rank int,primary key(stud_id,c_no), foreign key(stud_id) references Student(stud_id),
+    foreign key(c_no) references Competition(c_no));
+
+----------- INSERTING VALUES -------------
+
+INSERT INTO Student VALUES(1,'snehal','BCA');
+INSERT INTO Student VALUES(2,'sanchit','BCA');
+INSERT INTO Student VALUES(3,'sahil','BCS');
+INSERT INTO Student VALUES(4,'Mauli','MCS');
+
+INSERT INTO Competition VALUES(1,'carrom','indoor');
+INSERT INTO Competition VALUES(2,'chess','indoor');
+INSERT INTO Competition VALUES(3,'cricket','outdoor');
+INSERT INTO Competition VALUES(4,'khokho','outdoor');
+INSERT INTO Competition VALUES(5,'kabaddi','outdoor');
+
+INSERT INTO Stud_comp VALUES(1,1,1);
+INSERT INTO Stud_comp VALUES(1,2,1);
+INSERT INTO Stud_comp VALUES(1,3,1);
+INSERT INTO Stud_comp VALUES(2,3,2);
+INSERT INTO Stud_comp VALUES(3,4,2);
+INSERT INTO Stud_comp VALUES(4,4,1);
+INSERT INTO Stud_comp VALUES(4,5,1);
+
+
+
+select * from Student;
+ stud_id |  name   | class 
+---------+---------+-------
+       1 | snehal  | BCA
+       2 | sanchit | BCA
+       3 | sahil   | BCS
+       4 | Mauli   | MCS
+(4 rows)
+
+ select * from Competition;
+ c_no | c_name  |  type   
+------+---------+---------
+    1 | carrom  | indoor
+    2 | chess   | indoor
+    3 | cricket | outdoor
+    4 | khokho  | outdoor
+    5 | kabaddi | outdoor
+(5 rows)
+
+ select * from Stud_comp;
+ stud_id | c_no | rank 
+---------+------+------
+       1 |    1 |    1
+       1 |    2 |    1
+       1 |    3 |    1
+       2 |    3 |    2
+       3 |    4 |    2
+       4 |    4 |    1
+       4 |    5 |    1
+(7 rows)
+
+
