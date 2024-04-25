@@ -7,6 +7,6 @@ print(list1)
 print(list2)
 
 #merge lists
-merged.list <- list(list1,list2)
+merged.list <- list(c(list1,list2))     # c() used to merge 2 lists
 print(merged.list)
 
