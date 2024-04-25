@@ -12,4 +12,52 @@ foreign key(hosp_no) references Hospital(hosp_no));
 
 ------------- INSERTING VALUES -----------------
 
+INSERT INTO Doctor VALUES(1,'rahul','plot12','pune','xyz');
+INSERT INTO Doctor VALUES(2,'rajat','plot78','pune','abc');
+INSERT INTO Doctor VALUES(3,'shubhra','plot78','mumbai','abc');
+INSERT INTO Doctor VALUES(4,'sanchit','plot17','mumbai','rty');
+
+INSERT INTO Hospital VALUES(1,1,'anand','pune');
+INSERT INTO Hospital VALUES(1,2,'multispeciality','nasik');
+INSERT INTO Hospital VALUES(1,3,'mauli','dhule');
+INSERT INTO Hospital VALUES(2,4,'mauli','dhule');
+INSERT INTO Hospital VALUES(2,5,'mauli','dhule');
+INSERT INTO Hospital VALUES(3,6,'aai','dhule');
+
+INSERT INTO Doc_hos VALUES(3,6);
+INSERT INTO Doc_hos VALUES(1,6);
+INSERT INTO Doc_hos VALUES(2,6);
+INSERT INTO Doc_hos VALUES(2,3);
+INSERT INTO Doc_hos VALUES(3,3);
+
+
+select * from Doctor;
+ doc_no |  dname  | address |  city  | area 
+--------+---------+---------+--------+------
+      1 | rahul   | plot12  | pune   | xyz
+      2 | rajat   | plot78  | pune   | abc
+      3 | shubhra | plot78  | mumbai | abc
+      4 | sanchit | plot17  | mumbai | rty
+(4 rows)
+
+select * from Hospital;
+ doc_no | hosp_no |      hname      | hcity 
+--------+---------+-----------------+-------
+      1 |       1 | anand           | pune
+      1 |       2 | multispeciality | nasik
+      1 |       3 | mauli           | dhule
+      2 |       4 | mauli           | dhule
+      2 |       5 | mauli           | dhule
+      3 |       6 | aai             | dhule
+(6 rows)
+
+select * from Doc_hos;
+ doc_no | hosp_no 
+--------+---------
+      3 |       6
+      1 |       6
+      2 |       6
+      2 |       3
+      3 |       3
+(5 rows)
 
