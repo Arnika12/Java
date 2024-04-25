@@ -1,0 +1,15 @@
+####  Doctor 
+create table Doctor(doc_no int primary key, dname varchar(20),address varchar(50),city varchar(10),area varchar(10));
+
+#### Hospital
+create table Hospital(hosp_no int primary key, hname varchar(20),hcity varchar(10));
+
+#### 3nf
+create table Doc_hos(doc_no int,hosp_no int,primary key(doc_no,hosp_no),
+foreign key(doc_no) references Doctor(doc_no),
+foreign key(hosp_no) references Hospital(hosp_no));
+
+
+------------- INSERTING VALUES -----------------
+
+
