@@ -1,1 +1,18 @@
+CREATE TABLE Dept (
+    d_no INT PRIMARY KEY,
+    dname VARCHAR(100),
+    location VARCHAR(100)
+);
+
+CREATE TABLE Emp (
+    e_no INT PRIMARY KEY,
+    ename VARCHAR(100),
+    address VARCHAR(255),
+    phone VARCHAR(20),
+    salary DECIMAL(10, 2),
+    d_no INT,
+    FOREIGN KEY (d_no) REFERENCES Dept(d_no)
+);
+
+
 
