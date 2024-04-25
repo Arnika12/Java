@@ -1,1 +1,12 @@
-<?xml version=1.0?><Bookstore><Books><PHP><title></title><publication></attrib></PHP></Books></Bookstore>
+<?xml version=1.0?>
+<Bookstore>
+  <Books>
+    <PHP>
+      <title>
+        
+      </title>
+      <publication>
+      </attrib>
+    </PHP>
+  </Books>
+</Bookstore>
