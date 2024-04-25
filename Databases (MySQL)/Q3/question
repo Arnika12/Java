@@ -1,0 +1,2 @@
+3. Consider the following entities and their relationship Emp( e_no, ename, address, phone, salary) Dept(d_no, dname, location) Emp-Dept related with many-one relationship. Create a RDB in 3NF for above and solve the following. Using above database write a script in PHP which will a) Insert Employee records and Department records into respective tables. b) Print a salary statement in the format given below, for a given Department. [Hint : create a HTML form to accept Department name form user]
+                    Maximum Salary Minimum Salary Sum salary
