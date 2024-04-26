@@ -1,22 +1,3 @@
-<!-- <?php
-// $doc = new DOMDocument();
-// $doc->load("book.xml");
-
-// $books = $doc->getElementsByTagName("books");
-
-// echo "Books Names:<br>";
-// foreach ($books as $book) {
-//     $bookName = $book->getElementsByTagName("book_name")->item(0)->textContent;
-//     echo $bookName . "<br>";
-// }
-
-// echo "<br>Years:<br>";
-// foreach ($books as $book) {
-//     $year = $book->getElementsByTagName("year")->item(0)->textContent;
-//     echo $year . "<br>";
-// }
-?> -->
-
 <?php
 $doc = new DOMDocument();
 $doc->load("book.xml");
@@ -44,3 +25,15 @@ foreach ($books as $book) {
 
 echo "</table>";
 ?>
+
+
+
+
+<!--
+->item(0): This part accesses the first item in the NodeList. NodeList objects are zero-indexed, so item(0) refers to the first 
+            element in the list. If the NodeList is empty, or if there are no elements with the tag name "book_no" under the $book element, 
+            item(0) will return null.
+
+->textContent: This part retrieves the text content of the selected element. If the element contains text content, it returns that content as a string. 
+                If the element has child elements or if it's empty, textContent will return an empty string.
+-->
