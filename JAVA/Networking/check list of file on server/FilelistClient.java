@@ -3,6 +3,8 @@
 
 //Client side code 
 
+// --------------- ERROR IN CODE --------------
+
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -11,11 +13,8 @@ import java.util.List;
 public class FilelistClient {
 
     public static void main(String[] args) {
-        String serverAddress = "localhost";
-        int serverPort = 8080;
-
         try {
-            Socket soc = new Socket("localhost", 8080);
+            Socket soc = new Socket("localhost", 8070);
             System.out.println("Connected to server.");
 
             // Get input and output streams

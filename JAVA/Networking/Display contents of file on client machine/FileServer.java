@@ -5,15 +5,15 @@ error message.*/
 // Server side code
 
 import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.net.*;
 
 public class FileServer {
 
     public static void main(String[] args) {
 
-        try (ServerSocket serverSoc = new ServerSocket(8080)) {
-            System.out.println("Server is running on port " + 8080);
+        try {
+            ServerSocket serverSoc = new ServerSocket(8070);
+            System.out.println("Server is running on port " + 8070);
 
             while (true) {
                 // Accept incoming connection
@@ -30,7 +30,8 @@ public class FileServer {
 
                 // Check if the file exists
                 File file = new File(fileName);
-                if (file.exists() && file.isFile()) {
+                if (file.exists() && file.isFile()) 
+                {
                     output.writeBoolean(true); // Indicate that the file exists
 
                     // Send the contents of the file to the client
@@ -39,8 +40,9 @@ public class FileServer {
                     while ((line = br.readLine()) != null) {
                         output.writeBytes(line + "\n");
                     }
-                    reader.close();
-                } else {
+                    br.close();
+                } 
+                else {
                     output.writeBoolean(false); // Indicate that the file does not exist
                 }
 

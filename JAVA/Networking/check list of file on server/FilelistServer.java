@@ -1,5 +1,5 @@
-/* 4. Write a program to accept a list of file names on the client machine and check how many exist on the server. 
-      Display appropriate messages on the client side.*/
+/* 4. Write a program to accept a list of file names on the client machine and check how many 
+        exist on the server.Display appropriate messages on the client side.*/
 
 //Server side code 
 
@@ -13,8 +13,8 @@ public class FilelistServer {
     public static void main(String[] args) {
 
         try {
-        	  ServerSocket serverSoc = new ServerSocket(8080);
-            System.out.println("Server is running on port " + 8080);
+        	  ServerSocket serverSoc = new ServerSocket(8070);
+            System.out.println("Server is running on port " + 8070);
 
             while (true) {
                 Socket clientSoc = serverSoc.accept();

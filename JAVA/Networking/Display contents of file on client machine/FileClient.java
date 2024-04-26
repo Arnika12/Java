@@ -11,13 +11,13 @@ public class FileClient {
 
     public static void main(String[] args) {
         try {
-            Socket s = new Socket(localhost, 8080);
+            Socket s = new Socket("localhost", 8070);
             System.out.println("Connected to server.");
 
             DataInputStream input = new DataInputStream(s.getInputStream());
             DataOutputStream output = new DataOutputStream(s.getOutputStream());
 
-            String fileName = "/home/mitacsc/ArnikaFYMSCCA/abc.txt"; 
+            String fileName = "1.txt"; 
             output.writeUTF(fileName);
             output.flush();
 
@@ -32,7 +32,7 @@ public class FileClient {
                 while ((line = br.readLine()) != null) {
                     System.out.println(line);
                 }
-                reader.close();
+                br.close();
             } else {
                 System.out.println("Error: File " + fileName + " not found on the server.");
             }
