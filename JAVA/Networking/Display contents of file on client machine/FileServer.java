@@ -8,7 +8,6 @@ import java.io.*;
 import java.net.*;
 
 public class FileServer {
-
     public static void main(String[] args) {
 
         try {
@@ -45,7 +44,6 @@ public class FileServer {
                 else {
                     output.writeBoolean(false); // Indicate that the file does not exist
                 }
-
 
                 clientSoc.close();
                 System.out.println("Client disconnected.");
