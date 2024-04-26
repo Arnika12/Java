@@ -12,3 +12,5 @@ Write a PHP script to generate an XML in the following format in php.
 <Publication> WORX</Publication>
 </PHP></Books>
 </Book Store>
+
+HERE IN THIS QUESTION NO NEED TO CREATE books.xml MANUALLY IT WILL GET CREATED AUTOMATICALLY
