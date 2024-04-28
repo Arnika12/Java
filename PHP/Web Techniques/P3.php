@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Display error message
-        echo "<h2>Incorrect username or password. Please try again.</h2>";
+        $errorMessage = "Incorrect username or password. Please try again.";
     }
 }
 ?>
@@ -58,7 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Login">
     </form>
+
+    <?php if (isset($errorMessage)): ?>
+        <p><?php echo $errorMessage; ?></p>
+    <?php elseif ($_SESSION['login_attempts'] > 0 && $_SESSION['login_attempts'] < 3): ?>
+        <p>Remaining login attempts: <?php echo 3 - $_SESSION['login_attempts']; ?></p>
+    <?php endif; ?>
 </body>
 
 </html>
-
