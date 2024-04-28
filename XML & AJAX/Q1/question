@@ -1,10 +1,8 @@
-Consider the following entities and their relationship.
-
-Doctor ( doc_no, dname, address, city, area)
-Hospital (hosp_no, hname, hcity)
-
-Doctor-Hospital related with many-one relationship.
-Create a RDB in 3NF for above and solve the following.
-
-Using above database write a script in PHP to print the Doctor visiting to the hospital in 
-tabular format.  Accept hospital name from user[ Use MySQL]
+Write a script to create XML file as ‘Employee.xml’. The element of this xml file
+are as follows:
+<Empdetails>
+<Employee EMPno= Empname=>
+<Salary>--------</Salary>
+<Designation>-------</Designation>
+</Employee>
+</Empdetails>
