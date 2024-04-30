@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 // Write a Servlet program for the implementation of session tracking
 
+=======
+>>>>>>> 371961e9693af45948ef6335ee9289baba1ff48d
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+<<<<<<< HEAD
 @WebServlet("/SessionTrackingServlet")
+=======
+>>>>>>> 371961e9693af45948ef6335ee9289baba1ff48d
 public class SessionTrackingServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

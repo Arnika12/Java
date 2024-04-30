@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 // Write a Servlet application to display Hello Java Message on the Browser.  
 
+=======
+>>>>>>> 371961e9693af45948ef6335ee9289baba1ff48d
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+<<<<<<< HEAD
 @WebServlet("/hello")
+=======
+>>>>>>> 371961e9693af45948ef6335ee9289baba1ff48d
 public class HelloServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -16,4 +22,7 @@ public class HelloServlet extends HttpServlet {
         out.println("</body></html>");
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 371961e9693af45948ef6335ee9289baba1ff48d
