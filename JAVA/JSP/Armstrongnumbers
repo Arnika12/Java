@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Armstrong Numbers</title>
+</head>
+<body>
+    <h2>Armstrong Numbers between 1 and n</h2>
+    <%@ page import="java.util.ArrayList" %>
+    <%@ page import="java.util.List" %>
+    <%!
+        // Function to check if a number is Armstrong or not
+        boolean isArmstrong(int num) {
+            int originalNum, remainder, result = 0, n = 0;
+            originalNum = num;
+            
+            // Store the number of digits of num in n
+            for (;originalNum != 0; originalNum /= 10, ++n);
+            
+            originalNum = num;
+            
+            // Calculate Armstrong number
+            while (originalNum != 0) {
+                remainder = originalNum % 10;
+                result += Math.pow(remainder, n);
+                originalNum /= 10;
+            }
+            
+            // Check if num is equal to the result
+            return result == num;
+        }
+    %>
+    
+    <%-- Input n from the user --%>
+    <%
+        int n = 1000; // Change this to your desired upper limit
+        List<Integer> armstrongNumbers = new ArrayList<Integer>();
+        
+        // Find Armstrong numbers between 1 and n
+        for (int i = 1; i <= n; i++) {
+            if (isArmstrong(i)) {
+                armstrongNumbers.add(i);
+            }
+        }
+    %>
+    
+    <%-- Display Armstrong numbers in blue color --%>
+    <p>Armstrong numbers between 1 and <%= n %>:</p>
+    <ul>
+        <% for (Integer armstrongNumber : armstrongNumbers) { %>
+            <li style="color: blue;"><%= armstrongNumber %></li>
+        <% } %>
+    </ul>
+</body>
+</html>
