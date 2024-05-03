@@ -1,0 +1,2 @@
+In the client code, you're trying to read the file contents using BufferedReader, but you're using DataInputStream to read the file contents sent by the server. 
+You should use BufferedReader to read from the input stream obtained from the socket's input stream.

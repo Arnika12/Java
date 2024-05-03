@@ -1,38 +1,35 @@
-// 5. Write a server program which echoes messages sent by the client. 
-//     The process continues till the client types “END”.
-
 import java.io.*;
 import java.net.*;
+import java.util.Scanner;
 
-class ClientDemo {
+public class ClientDemo {
     public static void main(String[] args) {
         try {
-            Socket s = new Socket("localhost", 5500);
-            System.out.println("Client connected to server.");
-
-            DataInputStream ios = new DataInputStream(s.getInputStream());
-            DataOutputStream dos = new DataOutputStream(s.getOutputStream());
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            Socket socket = new Socket("localhost", 12345);
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+            Scanner scanner = new Scanner(System.in);
 
             String message;
-            while (true) {
-                System.out.println("Enter message to send to server:");
-                message = br.readLine();
-                dos.writeUTF(message);
-                if (message.equalsIgnoreCase("end")) {
-                    System.out.println("Chatting terminated.");
-                    break;
-                }
-                String response = ios.readUTF();
-                System.out.println("Server response: " + response);
-            }
+            do {
+                // Read input from user
+                System.out.print("Enter message (type END to finish): ");
+                message = scanner.nextLine();
+
+                // Send message to server
+                out.println(message);
+
+                // Receive echo from server
+                String echo = in.readLine();
+                System.out.println("Server: " + echo);
+            } while (!message.equals("END"));
+
             // Close resources
-            dos.close();
-            ios.close();
-            s.close();
+            in.close();
+            out.close();
+            socket.close();
         } catch (IOException e) {
-            // Handle IO exceptions
-            System.err.println("Error: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }
